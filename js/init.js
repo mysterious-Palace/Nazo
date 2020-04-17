@@ -1,6 +1,7 @@
 var da=
 [
   "juruo",
+  /*
   "27946",
   "4",
   "akioi",
@@ -9,4 +10,5 @@ var da=
   "250637",
   "45dinotlep1000",
   "haveagoodtime",
+  */
 ]
