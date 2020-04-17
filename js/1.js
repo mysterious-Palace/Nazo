@@ -1,4 +1,5 @@
 var main=document.getElementById("main");
+main.innerHTML="";
 
 main.innerHTML+="欢迎来到45dino Nazo。<br/>\n";
 main.innerHTML+="我想你应该拿到了一个exe文件，只要输入每一关的答案，就会显示下一关的网址。<br/>\n";
