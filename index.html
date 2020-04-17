@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
-    <script src="./js/init.js"></script>
   </head>
 <body class="gray-bg">
     <div class="wrapper wrapper-content">
@@ -19,7 +18,7 @@
                                 <div class="project-list" id="main"></div>
                             </div>
                             <div class="ibox-content">
-                                <div class="project-list">
+                                <div class="project-list" id="tijiao">
                                   <b>答案</b>: <input type=text id="tj"><input type="button" onClick="tj()" value="提交"/>
                                 </div>
                             </div>
@@ -29,13 +28,24 @@
             </div>
         </div>
     </div>
+    <script src="./js/init.js"></script>
     <script>
       var gk=1;
       function f()
       {
-        var header=document.getElementById("header");
-        header.innerHTML="<h3>第"+gk+"关</h3>\n";
-        document.write("<script src=\"js/"+gk+".js\"><\/script>");
+        if(gk==-1)
+        {
+          var header=document.getElementById("header");
+          header.innerHTML="<h3>你通关了!</h3>\n";
+          document.getElementById("tijiao").innerHTML="";
+        }
+        else
+        {
+          var header=document.getElementById("header");
+          header.innerHTML="<h3>第"+gk+"关</h3>\n";
+        }
+        document.getElementById("tj").value="";
+        init(gk);
       }
       f();
       function tj(variable)
@@ -51,6 +61,8 @@
           else
           {
             alert("没有下一关了呢，作者会努力制作的~");
+            gk=-1;
+            f();
           }
         }
         else
