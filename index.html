@@ -1,73 +1,9 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>45dino's Nazo</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/style.css" rel="stylesheet">
-  </head>
-<body class="gray-bg">
-    <div class="wrapper wrapper-content">
-        <div class="row">
-            <div class="col-sm-10">
-                <div class="row">
-                    <div class="col-sm-7">
-                        <div class="ibox">
-                            <div class="ibox-title" id="header"></div>
-                            <div class="ibox-content">
-                                <div class="project-list" id="main"></div>
-                            </div>
-                            <div class="ibox-content">
-                                <div class="project-list" id="tijiao">
-                                  <b>答案</b>: <input type=text id="tj"><input type="button" onClick="tj()" value="提交"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="./js/init.js"></script>
-    <script>
-      var gk=1;
-      function f()
-      {
-        if(gk==-1)
-        {
-          var header=document.getElementById("header");
-          header.innerHTML="<h3>你通关了!</h3>\n";
-          document.getElementById("tijiao").innerHTML="";
-        }
-        else
-        {
-          var header=document.getElementById("header");
-          header.innerHTML="<h3>第"+gk+"关</h3>\n";
-        }
-        document.getElementById("tj").value="";
-        init(gk);
-      }
-      f();
-      function tj(variable)
-      {
-        if(document.getElementById("tj").value==da[gk-1])
-        {
-          if(da[gk+1]!=undefined)
-          {
-            alert("恭喜你打破了第"+String(gk)+"关，正在进入下一关！");
-            gk++;
-            f();
-          }
-          else
-          {
-            alert("没有下一关了呢，作者会努力制作的~");
-            gk=-1;
-            f();
-          }
-        }
-        else
-          alert("不好意思，错了哦~");
-      }
-    </script>
-</body>
+<script>
+<!--
+document.write(unescape("%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%20%20%3Chead%3E%0A%20%20%20%20%3Ctitle%3E45dino%27s%20Nazo%3C/title%3E%0A%20%20%20%20%3Cmeta%20http-equiv%3D%22Content-Type%22%20content%3D%22text/html%3B%20charset%3DUTF-8%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%20%20%3Clink%20href%3D%22./css/style.css%22%20rel%3D%22stylesheet%22%3E%0A%20%20%3C/head%3E%0A%3Cbody%20class%3D%22gray-bg%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22wrapper%20wrapper-content%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-10%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-sm-7%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22ibox%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22ibox-title%22%20id%3D%22header%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22ibox-content%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22project-list%22%20id%3D%22main%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22ibox-content%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22project-list%22%20id%3D%22tijiao%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cb%3E%u7B54%u6848%3C/b%3E%3A%20%3Cinput%20type%3Dtext%20id%3D%22tj%22%3E%3Cinput%20type%3D%22button%22%20onClick%3D%22tj%28%29%22%20value%3D%22%u63D0%u4EA4%22/%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cscript%20src%3D%22./js/init.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20var%20gk%3D1%3B%0A%20%20%20%20%20%20function%20f%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20if%28gk%3D%3D-1%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20var%20header%3Ddocument.getElementById%28%22header%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20header.innerHTML%3D%22%3Ch3%3E%u4F60%u901A%u5173%u4E86%21%3C/h3%3E%5Cn%22%3B%0A%20%20%20%20%20%20%20%20%20%20document.getElementById%28%22tijiao%22%29.innerHTML%3D%22%22%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20var%20header%3Ddocument.getElementById%28%22header%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20header.innerHTML%3D%22%3Ch3%3E%u7B2C%22+gk+%22%u5173%3C/h3%3E%5Cn%22%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20document.getElementById%28%22tj%22%29.value%3D%22%22%3B%0A%20%20%20%20%20%20%20%20init%28gk%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20f%28%29%3B%0A%20%20%20%20%20%20function%20tj%28variable%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20if%28document.getElementById%28%22tj%22%29.value%3D%3Dda%5Bgk-1%5D%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20if%28da%5Bgk+1%5D%21%3Dundefined%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20alert%28%22%u606D%u559C%u4F60%u6253%u7834%u4E86%u7B2C%22+String%28gk%29+%22%u5173%uFF0C%u6B63%u5728%u8FDB%u5165%u4E0B%u4E00%u5173%uFF01%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20gk++%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20f%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20alert%28%22%u6CA1%u6709%u4E0B%u4E00%u5173%u4E86%u5462%uFF0C%u4F5C%u8005%u4F1A%u52AA%u529B%u5236%u4F5C%u7684%7E%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20gk%3D-1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20f%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20alert%28%22%u4E0D%u597D%u610F%u601D%uFF0C%u9519%u4E86%u54E6%7E%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/script%3E%0A%3C/body%3E%0A%3C/html%3E"));
+//-->
+</script>
 </html>
