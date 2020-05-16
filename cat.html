@@ -28,7 +28,7 @@
 
     function onMessage(event) {
         document.getElementById('messages').innerHTML
-            +=marked("---")+"<br />";
+            +=marked("---");
         var txt=marked(event.data);
         txt=txt.replace("\n","<br />");
         document.getElementById('messages').innerHTML
