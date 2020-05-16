@@ -27,7 +27,7 @@
     var webSocket = null;
 
     function onMessage(event) {
-        var txt=marked(event.data);
+        var txt=marked("---\n"+event.data);
         txt=txt.replace("\n","<br />");
         document.getElementById('messages').innerHTML
             += txt;
@@ -73,7 +73,7 @@
     }
 
     function start() {
-        var text = "<br />" + document.getElementById('content').value;
+        var text = "<br />\n" + document.getElementById('content').value;
         webSocket.send(text);
         document.getElementById('content').value = '';
     }
