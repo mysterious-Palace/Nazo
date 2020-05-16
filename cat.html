@@ -29,8 +29,7 @@
     function onMessage(event) {
         document.getElementById('messages').innerHTML
             +=marked("---");
-        var txt=marked(event.data);
-        txt=txt.replace("\n","<br />");
+        var txt=event.data;
         document.getElementById('messages').innerHTML
             += txt;
     }
@@ -75,7 +74,8 @@
     }
 
     function start() {
-        var text = "<br />\n" + document.getElementById('content').value;
+        var text = document.getElementById('content').value;
+        text = "<br />" + marked(text);
         webSocket.send(text);
         document.getElementById('content').value = '';
     }
