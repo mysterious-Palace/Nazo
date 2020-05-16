@@ -27,8 +27,10 @@
     var webSocket = null;
 
     function onMessage(event) {
+        var txt=event.data;
+        txt=txt.replace("\n","<br />");
         document.getElementById('messages').innerHTML
-            += '<br />' + marked(event.data);
+            += marked(txt);
     }
 
     function onOpen(event) {
