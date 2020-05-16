@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>在线实时聊天室</title>
+    <link href='https://UJT-Team.github.io/article/vue.css' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 <div>
@@ -26,12 +28,12 @@
 
     function onMessage(event) {
         document.getElementById('messages').innerHTML
-            += '<br />' + event.data;
+            += '<br />' + marked(event.data);
     }
 
     function onOpen(event) {
         document.getElementById('messages').innerHTML
-            = 'Connection established';
+            = '链接成功';
     }
 
     function onError(event) {
